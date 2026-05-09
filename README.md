@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ExpenseFlow
 
-## Getting Started
+ExpenseFlow is a full stack Expense Management System where users can submit expense requests and admins can review, approve, reject, and manage them through a dashboard.
 
-First, run the development server:
+The project is built using modern web technologies with separate frontend and backend architecture.
+
+---
+
+# Features
+
+## User
+- Register and login
+- Create expense requests
+- Upload receipts
+- View expense history
+- Track approval status
+
+## Admin
+- View all expenses
+- Approve/reject requests
+- Manage users
+- View analytics and logs
+
+---
+
+# Tech Stack
+
+## Frontend
+- Next.js
+- TypeScript
+- Tailwind CSS
+- ShadCN UI
+
+## Backend
+- Express.js
+- Prisma ORM
+- PostgreSQL
+- JWT Authentication
+
+## Other Tools
+- Cloudinary
+- Multer
+- Zustand
+- Recharts
+
+---
+
+# Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+expense-management-system/
+│
+├── frontend/
+├── backend/
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Clone the Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone <repository-url>
+cd expense-management-system
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+# Frontend Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Frontend runs on:
 
-## Deploy on Vercel
+```bash
+http://localhost:3000
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Backend Setup
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+Backend runs on:
+
+```bash
+http://localhost:5000
+```
+
+---
+
+# Environment Variables
+
+Create a `.env` file inside the backend folder:
+
+```env
+DATABASE_URL=
+
+JWT_SECRET=
+
+CLOUDINARY_CLOUD_NAME=
+
+CLOUDINARY_API_KEY=
+
+CLOUDINARY_API_SECRET=
+```
+
+---
+
+# Prisma Setup
+
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+---
+
+# Demo Credentials
+
+## Admin
+
+```bash
+Email: admin@expenseflow.com
+Password: Admin@123
+```
+
+## User
+
+```bash
+Email: user@expenseflow.com
+Password: User@123
+```
+
+---
+
+# Deployment
+
+- Frontend → Vercel
+- Backend → Railway / Render
+- Database → NeonDB
+- File Uploads → Cloudinary
